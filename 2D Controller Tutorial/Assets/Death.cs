@@ -17,16 +17,7 @@ public class Death : MonoBehaviour
         spawnPos = Player.transform.position;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other == Player)
-        {
-            Player.transform.position = spawnPos;
-        }
-            
-    }
-
-    public void NewSpawnPoint(Vector3 newPoint)
+    private void NewSpawnPoint(Vector3 newPoint)
     {
         spawnPos = newPoint;
     }

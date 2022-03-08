@@ -7,6 +7,7 @@ namespace TarodevController
     public class Checkpoint : MonoBehaviour
     {
         public bool FlipCamX;
+        public bool FlipCamY;
         void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.CompareTag("Player"))
@@ -16,7 +17,11 @@ namespace TarodevController
 
                 if (FlipCamX)
                 {
-                    MoveCamera.Instance.FlipOffset();
+                    MoveCamera.Instance.FlipXOffset();
+                }
+                if (FlipCamY)
+                {
+                    MoveCamera.Instance.FlipYOffset();
                 }
                     
             }

@@ -58,8 +58,13 @@ public class MoveCamera : MonoBehaviour
         }
     }
 
-    public void FlipOffset()
+    public void FlipXOffset()
     {
         Offset = new Vector3(Offset.x * -1,Offset.y, Offset.z);
+    }
+
+    public void FlipYOffset()
+    {
+        Offset = new Vector3(Offset.x, Offset.y * -1, Offset.z);
     }
 }
